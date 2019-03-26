@@ -22,15 +22,15 @@ var distribution = [
     [0.3, 0.4, 0.2, 0.1]
 ];
 
-var agrGroup = 1;   //Change age group according to the person's data
+var ageGroup = 1;
 
 var chart = {
         // iris data from R
         columns: [
-            ['Food', typicalPay*distribution[0]],
-            ['Leisure', typicalPay*distribution[1]],
-            ['Transport', typicalPay*distribution[2]],
-            ['Savings', typicalPay*distribution[3]]
+            ['Food', typicalPay*distribution[ageGroup][0]],
+            ['Leisure', typicalPay*distribution[ageGroup][1]],
+            ['Transport', typicalPay*distribution[ageGroup][2]],
+            ['Savings', typicalPay*distribution[ageGroup][3]]
         ],
         type : 'pie',
         onclick: function (d, i) { console.log("onclick", d, i); },
