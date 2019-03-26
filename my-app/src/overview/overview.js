@@ -16,6 +16,7 @@ class Overview extends Component {
   }
   
   getAge() {
+    //Get the age of the user from the API 
     axios.get('http://api-gateway-dbs-techtrek.ap-southeast-1.elasticbeanstalk.com/customers/1/details', {
       headers: {
         'identity': 'Group5',
@@ -59,6 +60,7 @@ class Overview extends Component {
   }
     
   componentDidMount() {
+    // Loads these functions when the page loads 
     axios.get('http://api-gateway-dbs-techtrek.ap-southeast-1.elasticbeanstalk.com/accounts/deposit/74/balance?month=1&year=2018', {
       params: {
         'accountId': '74',
