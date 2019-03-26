@@ -17,16 +17,19 @@ serviceWorker.unregister();
 var typicalPay = 700;
 var distribution = [
     [0.3, 0.1, 0.25, 0.35],
-    [0.3, 0.1, 0.35, 0.25]
+    [0.3, 0.1, 0.35, 0.25],
+    [0.3, 0.4, 0.2, 0.1]
 ];
+
+var ageGroup = 1;
 
 var chart = {
         // iris data from R
         columns: [
-            ['Food', typicalPay*distribution[0]],
-            ['Leisure', typicalPay*distribution[1]],
-            ['Transport', typicalPay*distribution[2]],
-            ['Savings', typicalPay*distribution[3]]
+            ['Food', typicalPay*distribution[ageGroup][0]],
+            ['Leisure', typicalPay*distribution[ageGroup][1]],
+            ['Transport', typicalPay*distribution[ageGroup][2]],
+            ['Savings', typicalPay*distribution[ageGroup][3]]
         ],
         type : 'pie',
         onclick: function (d, i) { console.log("onclick", d, i); },
