@@ -18,8 +18,11 @@ serviceWorker.unregister();
 var typicalPay = 700;
 var distribution = [
     [0.3, 0.1, 0.25, 0.35],
-    [0.3, 0.1, 0.35, 0.25]
+    [0.3, 0.1, 0.35, 0.25],
+    [0.3, 0.4, 0.2, 0.1]
 ];
+
+var agrGroup = 1;   //Change age group according to the person's data
 
 var chart = {
         // iris data from R
