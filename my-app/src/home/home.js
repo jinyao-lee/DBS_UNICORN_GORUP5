@@ -5,8 +5,12 @@ import { Tab } from  'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
 import Overview from '../overview/overview';
 import Goals from '../goals/goals';
+import axios from 'axios';
+
 
 class Home extends Component {
+  
+  
   render() {
     return (
       <div className="home-container">
