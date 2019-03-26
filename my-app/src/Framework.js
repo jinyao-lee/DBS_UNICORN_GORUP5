@@ -19,6 +19,13 @@ import React, { Component } from 'react';
     });
   }
 
+  handleChange2 = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
+  }
+
    handleClick() {
     console.log('From handleClick()', this);
     this.setState({onClick: true});
@@ -84,6 +91,12 @@ render(onClick && (
             name="time"
             value={this.state.ageGroup}
             onChange={this.handleChange}
+        />
+        <input
+            type="text"
+            name="time"
+            value={this.state.btoPrice}
+            onChange={this.handleChange2}
         />
         <button onClick={() => this.handleClick()}>Submit</button>
     </div>
