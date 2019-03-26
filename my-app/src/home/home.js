@@ -3,7 +3,8 @@ import './home.css';
 import { Image } from 'react-bootstrap';
 import { Tab } from  'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
-import { Sonnet } from 'react-bootstrap';
+import Overview from '../overview/overview';
+import Goals from '../goals/goals';
 
 class Home extends Component {
   render() {
@@ -13,15 +14,15 @@ class Home extends Component {
         <h4>Track your spending, set budgets and discover how you can achieve your goals.</h4>
         <Tabs defaultActiveKey="overview" id="uncontrolled-tab-example">
           <Tab eventKey="overview" title="Overview">
-           
+            <Overview />
           </Tab>
           <Tab eventKey="sail" title="Sail">
      
           </Tab>
           <Tab eventKey="goals" title="Goals" >
-            
+            <Goals />
           </Tab>
-        </Tabs>;
+        </Tabs>
       </div>
     )
   }
